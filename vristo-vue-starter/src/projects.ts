@@ -1,0 +1,108 @@
+export const clients = [
+    {
+      id: 1,
+      name: "Hotel Bull",
+      projects: [
+        {
+          id: 101,
+          name: "hotelbull.com",
+          color: "#3498db",
+          start_day: "03-01-2024",
+          end_day: "03-06-2024",
+          estimated_hours: 50,
+          total_hours: 60,
+          tasks: [
+            { id: 1, name: "Posicionamiento web", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 10, priority: "Baja", type: "SEO Técnico", status: "En Progreso" },
+            { id: 2, name: "Corrección de Errores Técnicos", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 8, priority: "Media", type: "SEO Linkbuilding", status: "Pendiente" },
+            { id: 3, name: "Optimización On-Page", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 12, priority: "Alta", type: "SEO de Contenidos", status: "En Progreso" },
+            { id: 4, name: "Análisis de Competencia", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 6, priority: "Alta", type: "SEO Técnico", status: "Pendiente" },
+            { id: 5, name: "Creación de Estrategia de Contenidos", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 10, priority: "Media", type: "SEO de Contenidos", status: "Completada" },
+          ],
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: "Banana Computer",
+      projects: [
+        {
+          id: 201,
+          name: "bananacomputer.com",
+          color: "#e67e22",
+          start_day: "03-03-2024",
+          end_day: "03-08-2024",
+          estimated_hours: 40,
+          total_hours: 50,
+          tasks: [
+            { id: 8, name: "Auditoría SEO", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 12, priority: "Alta", type: "SEO Técnico", status: "En Progreso" },
+            { id: 9, name: "Creación de Contenidos", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 10, priority: "Alta", type: "SEO Linkbuilding", status: "En Progreso" },
+            { id: 10, name: "Optimización de URLs", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 6, priority: "Media", type: "SEO Técnico", status: "Pendiente" },
+          ],
+        },
+        {
+          id: 202,
+          name: "hardwarebanana.com",
+          color: "#d35400",
+          start_day: "03-02-2024",
+          end_day: "01-04-2024",
+          estimated_hours: 35,
+          total_hours: 40,
+          tasks: [
+            { id: 12, name: "Corrección de Errores 404", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 6, priority: "Alta", type: "SEO Técnico", status: "Pendiente" },
+            { id: 13, name: "Optimización de Contenido Multimedia", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 5, priority: "Baja", type: "SEO de Contenidos", status: "Pendiente" },
+          ],
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: "Villa Gran Canaria",
+      projects: [
+        {
+          id: 301,
+          name: "villagrancanaria.com",
+          color: "#2ecc71",
+          start_day: "15-09-2024",
+          end_day: "15-11-2024",
+          estimated_hours: 45,
+          total_hours: 55,
+          tasks: [
+            { id: 16, name: "Corrección de Errores Técnicos", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 15, priority: "Alta", type: "SEO de Contenidos", status: "En Progreso" },
+            { id: 17, name: "Mejora de Conversión", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 8, priority: "Baja", type: "SEO Técnico", status: "En Progreso" },
+          ],
+        },
+      ],
+    },
+    {
+      id: 4,
+      name: "Quantum Asis",
+      projects: [
+        {
+          id: 401,
+          name: "quantumasis.com",
+          color: "#3498db",
+          start_day: "20-01-2024",
+          end_day: "03-04-2024",
+          estimated_hours: 38,
+          total_hours: 45,
+          tasks: [
+            { id: 21, name: "Corrección de Errores Técnicos", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 12, priority: "Baja", type: "SEO de Contenidos", status: "En Progreso" },
+          ],
+        },
+        {
+          id: 402,
+          name: "asisdigital.com",
+          color: "#2980b9",
+          start_day: "03-01-2024",
+          end_day: "03-01-2024",
+          estimated_hours: 30,
+          total_hours: 35,
+          tasks: [
+            { id: 24, name: "Configuración de CDN", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 10, priority: "Alta", type: "SEO Técnico", status: "Pendiente" },
+            { id: 25, name: "Optimización de Blog Corporativo", start_day: "03-01-2024", end_day: "03-01-2024", total_hours: 9, priority: "Alta", type: "SEO de Contenidos", status: "Pendiente" },
+          ],
+        },
+      ],
+    },
+  ];
+  
