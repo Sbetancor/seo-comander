@@ -1,7 +1,10 @@
+
 export const clients = [
     {
       id: 1,
       name: "Hotel Bull",
+      email:"bullhotels@hotmail.es",
+      phone: "+34 (821) 447-3782",
       projects: [
         {
           id: 101,
@@ -24,6 +27,8 @@ export const clients = [
     {
       id: 2,
       name: "Banana Computer",
+      email:"banana@hotmail.es",
+      phone: "+34 (821) 437-3552",
       projects: [
         {
           id: 201,
@@ -57,6 +62,8 @@ export const clients = [
     {
       id: 3,
       name: "Villa Gran Canaria",
+      email:"villasGranCanaria@hotmail.es",
+      phone: "+34 (923) 337-3742",
       projects: [
         {
           id: 301,
@@ -76,6 +83,8 @@ export const clients = [
     {
       id: 4,
       name: "Quantum Asis",
+      email:"quantumasis@hotmail.es",
+      phone: "+34 (441) 227-3782",
       projects: [
         {
           id: 401,

@@ -13,6 +13,11 @@ const routes: RouteRecordRaw[] = [
         component: () => import(/* webpackChunkName: "analytics" */ '../views/roadmap.vue'),
     },
     {
+        path: '/roadmapTask/:id',
+        name: 'roadmap',
+        component: () => import(/* webpackChunkName: "analytics" */ '../views/roadmapTasks.vue'),
+    },
+    {
         path: '/clients',
         name: 'clients',
         component: () => import(/* webpackChunkName: "analytics" */ '../views/clients.vue'),
