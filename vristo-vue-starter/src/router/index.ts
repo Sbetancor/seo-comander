@@ -21,7 +21,17 @@ const routes: RouteRecordRaw[] = [
         path: '/clients',
         name: 'clients',
         component: () => import(/* webpackChunkName: "analytics" */ '../views/clients.vue'),
-    }
+    },
+    {
+        path: '/newClient',
+        name: 'client',
+        component: () => import(/* webpackChunkName: "analytics" */ '../views/newClient.vue'),
+    },
+    {
+        path: '/tasks',
+        name: 'tasks',
+        component: () => import(/* webpackChunkName: "analytics" */ '../views/tasks.vue'),
+    },
 ];
 
 const router = createRouter({

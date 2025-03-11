@@ -113,3 +113,8 @@ const months = ref([
   "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
 ]);
 </script>
+
+
+<!-- tooltip para truncate
+<button type="button" v-tippy:top class="btn btn-info">Tooltip on top</button>
+<tippy target="top" placement="top">Popover on top</tippy> -->

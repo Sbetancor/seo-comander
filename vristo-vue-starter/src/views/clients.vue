@@ -1,7 +1,10 @@
 <template>
     <div>
-        <div class="panel pb-0 mt-6">
 
+
+    <router-link to="/newClient"> <button type="button" class="btn btn-primary">Agregar cliente</button>  </router-link>
+
+        <div class="panel pb-0 mt-6">
             <div class="datatable">
                 <vue3-datatable :rows="rows" :columns="cols" :totalRows="rows?.length" :sortable="true"
                     skin="whitespace-nowrap bh-table-hover"
@@ -60,12 +63,8 @@ import { useI18n } from 'vue-i18n';
 import { useAppStore } from '@/stores/index';
 import { useMeta } from '@/composables/use-meta';
 import { clients } from '@/projects'; // Ensure correct path
-
-
-
 useMeta({ title: 'Advanced Table' });
 const store = useAppStore();
-// multi language
 const i18n = reactive(useI18n());
 const cols = ref([
     { field: 'id', title: 'ID', isUnique: true },
@@ -125,6 +124,4 @@ const randomStatus = () => {
 const getRandomNumber = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
-
-
 </script>
