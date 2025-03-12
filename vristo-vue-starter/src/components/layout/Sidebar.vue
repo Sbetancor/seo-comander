@@ -6,7 +6,6 @@
                 <div class="flex justify-between items-center px-4 py-3">
                     <router-link to="/" class="main-logo flex items-center shrink-0">
                         <img class="w-8 ml-[5px] flex-none" :src="seoLogo" alt="SEO Commander Logo" />
-
                         <span
                             class="text-2xl ltr:ml-1.5 rtl:mr-1.5 font-semibold align-middle lg:inline dark:text-white-light">SEO-Comander</span>
                     </router-link>
@@ -61,6 +60,18 @@
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
+                                    <router-link to="/projects" class="group" @click="toggleMobileMenu">
+                                        <div class="flex items-center">
+                                            <icon-menu-components class="group-hover:!text-primary shrink-0" />
+
+                                            <span
+                                                class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{{
+                                                    $t('projects')
+                                                }}</span>
+                                        </div>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
                                     <router-link to="/tasks" class="group" @click="toggleMobileMenu">
                                         <div class="flex items-center">
                                             <icon-menu-tables class="group-hover:!text-primary shrink-0" />
@@ -68,6 +79,18 @@
                                             <span
                                                 class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{{
                                                     $t('tasks')
+                                                }}</span>
+                                        </div>
+                                    </router-link>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <router-link to="/tickets" class="group" @click="toggleMobileMenu">
+                                        <div class="flex items-center">
+                                            <icon-menu-chat class="group-hover:!text-primary shrink-0" />
+                                            <span
+                                                class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{{
+                                                    $t('Tickets')
                                                 }}</span>
                                         </div>
                                     </router-link>

@@ -7,31 +7,49 @@ import HomeView from '../views/index.vue';
 const routes: RouteRecordRaw[] = [
     // dashboard
     { path: '/', name: 'home', component: HomeView },
-      {
-        path: '/roadmap',
-        name: 'roadmap',
-        component: () => import(/* webpackChunkName: "analytics" */ '../views/roadmap.vue'),
-    },
-    {
-        path: '/roadmapTask/:id',
-        name: 'roadmapTask',
-        component: () => import(/* webpackChunkName: "analytics" */ '../views/roadmapTasks.vue'),
-    },
+   
     {
         path: '/clients',
         name: 'clients',
-        component: () => import(/* webpackChunkName: "analytics" */ '../views/clients.vue'),
+        component: () => import('../views/clients.vue'),
     },
     {
         path: '/newClient',
         name: 'client',
-        component: () => import(/* webpackChunkName: "analytics" */ '../views/newClient.vue'),
+        component: () => import('../views/newClient.vue'),
+    },
+    {
+        path: '/roadmap',
+        name: 'roadmap',
+        component: () => import('../views/roadmap.vue'),
+    },
+    {
+        path: '/roadmapTask/:id',
+        name: 'roadmapTask',
+        component: () => import('../views/roadmapTasks.vue'),
+    },
+    {
+        path: '/projects',
+        name: 'projects',
+        component: () => import('../views/projects.vue'),
     },
     {
         path: '/tasks',
         name: 'tasks',
-        component: () => import(/* webpackChunkName: "analytics" */ '../views/tasks.vue'),
+        component: () => import('../views/tasks.vue'),
     },
+    {
+        path: '/tickets',
+        name: 'tickets',
+        component: () => import('../views/tickets.vue'),
+    },
+    {
+        path: '/calendar',
+        name: 'calendar',
+        component: () => import('../views/calendar.vue'),
+    },
+  
+    
 ];
 
 const router = createRouter({

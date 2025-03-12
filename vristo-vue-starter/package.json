@@ -10,6 +10,11 @@
   },
   "dependencies": {
     "@bhplugin/vue3-datatable": "^2.0.2",
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/timegrid": "^6.1.15",
+    "@fullcalendar/vue3": "^6.1.15",
     "@headlessui/vue": "^1.7.23",
     "@suadelabs/vue3-multiselect": "^1.0.2",
     "@vuelidate/core": "^2.0.3",
@@ -17,6 +22,8 @@
     "@vueuse/head": "^2.0.0",
     "file-upload-with-preview": "^4.2.0",
     "pinia": "^2.0.22",
+    "quill": "^1.3.7",
+    "sweetalert2": "^11.17.2",
     "tippy.js": "^6.3.7",
     "vue": "^3.2.37",
     "vue-height-collapsible": "^0.1.1",
@@ -24,7 +31,8 @@
     "vue-router": "^4.1.5",
     "vue3-apexcharts": "^1.8.0",
     "vue3-perfect-scrollbar": "^2.0.0",
-    "vue3-popper": "^1.5.0"
+    "vue3-popper": "^1.5.0",
+    "vue3-quill": "^0.3.1"
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^4.0.0",

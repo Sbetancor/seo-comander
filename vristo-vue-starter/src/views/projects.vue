@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h5 class="font-semibold text-lg dark:text-white-light mb-5">Tareas</h5>
+        <h5 class="font-semibold text-lg dark:text-white-light mb-5">Proyectos</h5>
         <div class="panel pb-0 mt-6">
             <div class="datatable">
                 <vue3-datatable
@@ -23,12 +23,6 @@
                             <div class="font-semibold">{{ data.value.firstName + ' ' + data.value.lastName }}</div>
                         </div>
                     </template>
-                    <template #country>
-                        <div class="flex items-center gap-2">
-                            <img width="24" :src="`/assets/images/flags/${getCountry().code}.svg`" class="max-w-none" alt="user profile" />
-                            <div>{{ getCountry().name }}</div>
-                        </div>
-                    </template>
                     <template #email="data">
                         <a :href="`mailto:${data.value.email}`" class="text-primary hover:underline">{{ data.value.email }}</a>
                     </template>
@@ -39,13 +33,6 @@
                                 :class="`bg-${randomStatusColor()}`"
                                 :style="`width:${getRandomNumber(15, 100)}%`"
                             ></div>
-                        </div>
-                    </template>
-                    <template #rating="data">
-                        <div class="flex items-center justify-center text-warning">
-                            <div v-for="i in getRandomNumber(1, 5)" :key="i + data.value.id">
-                                <icon-star class="fill-warning" />
-                            </div>
                         </div>
                     </template>
                     <template #series="data">

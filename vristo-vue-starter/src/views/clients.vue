@@ -1,8 +1,9 @@
 <template>
     <div>
-
-
-    <router-link to="/newClient"> <button type="button" class="btn btn-primary">Agregar cliente</button>  </router-link>
+    <div class="flex justify-end">
+        <router-link to="/newClient"> <button type="button" class="btn btn-primary">Agregar cliente</button>
+        </router-link>
+    </div>
 
         <div class="panel pb-0 mt-6">
             <div class="datatable">
@@ -25,31 +26,20 @@
 
                     <template #email="data">
                         <a :href="`mailto:${data.value.email}`" class="text-primary hover:underline">{{ data.value.email
-                            }}</a>
-                    </template>
-                    <template #age>
-                        <div class="w-4/5 min-w-[100px] h-2.5 bg-[#ebedf2] dark:bg-dark/40 rounded-full flex">
-                            <div class="h-2.5 rounded-full rounded-bl-full text-center text-white text-xs"
-                                :class="`bg-${randomStatusColor()}`" :style="`width:${getRandomNumber(15, 100)}%`">
-                            </div>
-                        </div>
-                    </template>
-                    <template #rating="data">
-                        <div class="flex items-center justify-center text-warning">
-                            <div v-for="i in getRandomNumber(1, 5)" :key="i + data.value.id">
-                                <icon-star class="fill-warning" />
-                            </div>
-                        </div>
+                        }}</a>
                     </template>
                     <template #series="data">
-                        <div style="width: 150px" class="overflow-hidden">
-                            <apexchart :key="data.value.id" height="30" type="line" :options="chart_options"
-                                :series="[{ data: [21, 9, 36, 12, 44, 25, 59] }]"></apexchart>
+                        <div
+                            class="group cursor-pointer flex items-center justify-center p-2 rounded-full w-10 h-10 bg-gray-100 dark:bg-gray-700">
+                            <div
+                                class="transition-transform transform group-hover:scale-110 text-gray-500 group-hover:text-blue-500 dark:text-white ">
+                                <router-link :to="'/projects'">
+                                <icon-eye />
+                                </router-link>
+                            </div>
                         </div>
                     </template>
-                    <template #status>
-                        <span class="badge" :class="`badge-outline-${randomStatusColor()}`">{{ randomStatus() }}</span>
-                    </template>
+
                 </vue3-datatable>
             </div>
         </div>
@@ -58,11 +48,11 @@
 <script setup lang="ts">
 import { ref, reactive, computed } from 'vue';
 import Vue3Datatable from '@bhplugin/vue3-datatable';
-import apexchart from 'vue3-apexcharts';
 import { useI18n } from 'vue-i18n';
 import { useAppStore } from '@/stores/index';
 import { useMeta } from '@/composables/use-meta';
 import { clients } from '@/projects'; // Ensure correct path
+import IconEye from '@/components/icon/icon-eye.vue';
 useMeta({ title: 'Advanced Table' });
 const store = useAppStore();
 const i18n = reactive(useI18n());
@@ -70,10 +60,9 @@ const cols = ref([
     { field: 'id', title: 'ID', isUnique: true },
     { field: 'name', title: 'Cliente' },
     { field: 'email', title: 'Email' },
-    { field: 'age', title: 'Progress', sort: false },
     { field: 'phone', title: 'Phone' },
-    { field: 'series', title: 'Progress', sort: false },
-    { field: 'status', title: 'Status', sort: false },
+    { field: 'series', title: 'Proyectos', sort: false },
+
 ]);
 
 const rows = ref(clients.map(client => ({
@@ -110,17 +99,7 @@ const randomColor = () => {
     return color[random];
 };
 
-const randomStatusColor = () => {
-    const color = ['primary', 'secondary', 'success', 'danger', 'warning', 'info'];
-    const random = Math.floor(Math.random() * color.length);
-    return color[random];
-};
 
-const randomStatus = () => {
-    const status = ['PAID', 'APPROVED', 'FAILED', 'CANCEL', 'SUCCESS', 'PENDING', 'COMPLETE'];
-    const random = Math.floor(Math.random() * status.length);
-    return status[random];
-};
 const getRandomNumber = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
