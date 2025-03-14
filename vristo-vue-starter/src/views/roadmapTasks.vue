@@ -10,6 +10,42 @@
       </router-link>
     </div>
        <!-- Filtros -->
+       <div class="flex items-center gap-4 mb-6">
+        <multiselect
+          v-model="input2"
+          :options="optionsSelect2"
+          class="custom-multiselect"
+          :searchable="false"
+          :preselect-first="true"
+          :allow-empty="false"
+          selected-label=""
+          select-label=""
+          deselect-label=""
+        ></multiselect>
+        <multiselect
+          v-model="input"
+          :options="optionsSelect"
+          class="custom-multiselect"
+          :searchable="false"
+          :preselect-first="true"
+          :allow-empty="false"
+          selected-label=""
+          select-label=""
+          deselect-label=""
+        ></multiselect>
+        <multiselect
+          v-model="input3"
+          :options="optionsSelect3"
+          class="custom-multiselect"
+          :searchable="false"
+          :preselect-first="true"
+          :allow-empty="false"
+          selected-label=""
+          select-label=""
+          deselect-label=""
+        ></multiselect>
+    
+    </div>
     
     <!-- Card Wrapper for Roadmap -->
     <div class="w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
@@ -44,12 +80,18 @@ import { ref, computed } from "vue";
 import { useProjectsStore } from "@/stores/projectsStore";
 import { useRouter } from "vue-router";
 import { clients } from '@/projects';
-
+import Multiselect from '@suadelabs/vue3-multiselect';
+import '@suadelabs/vue3-multiselect/dist/vue3-multiselect.css';
+const optionsSelect = ref(['Prioridad', 'Alta', 'Media' , 'Baja']);
+const input = ref('Prioridad');
+const optionsSelect2 = ref(['Tipo','SEO Técnico', 'SEO de Contenido', 'SEO Linkbuilding']);
+const input2 = ref('Tipo');
+const optionsSelect3 = ref(['Estado','En progreso', 'Completado', 'Pendiente']);
+const input3 = ref('Estado');
 const projectStore = useProjectsStore();
 const selectedProject = computed(() => projectStore.selectedProject);
 const router = useRouter();
 const selectedClient = ref(null);
-
 const allProjects = computed(() => {
   if (!selectedClient.value) {
     return clients.flatMap(client => client.projects);

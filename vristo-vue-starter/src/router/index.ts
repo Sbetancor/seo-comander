@@ -7,11 +7,26 @@ import HomeView from '../views/index.vue';
 const routes: RouteRecordRaw[] = [
     // dashboard
     { path: '/', name: 'home', component: HomeView },
-   
+    {
+        path: '/login',
+        name: 'login',
+        component: () => import('../views/auth/login.vue'),
+        meta: { layout: 'auth' },
+    },
     {
         path: '/clients',
         name: 'clients',
         component: () => import('../views/clients.vue'),
+    },
+    {
+        path: '/clientSettings',
+        name: 'clientSettings',
+        component: () => import('../views/users/clientSettings.vue'),
+    },
+    {
+        path: '/profile',
+        name: 'profile',
+        component: () => import('../views/users/profile.vue'),
     },
     {
         path: '/newClient',
@@ -37,6 +52,31 @@ const routes: RouteRecordRaw[] = [
         path: '/tasks',
         name: 'tasks',
         component: () => import('../views/tasks.vue'),
+    },
+    {
+        path: '/scrumboard',
+        name: 'scrumboard',
+        component: () => import('../views/scrumboard.vue'),
+    },
+    {
+        path: '/invoice/list',
+        name: 'invoiceList',
+        component: () => import('../views/invoice/list.vue'),
+    },
+    {
+        path: '/invoice/preview',
+        name: 'invoicePreview',
+        component: () => import('../views/invoice/preview.vue'),
+    },
+    {
+        path: '/invoice/add',
+        name: 'invoiceAdd',
+        component: () => import('../views/invoice/add.vue'),
+    },
+    {
+        path: '/invoice/edit',
+        name: 'invoiceEdit',
+        component: () => import('../views/invoice/edit.vue'),
     },
     {
         path: '/tickets',

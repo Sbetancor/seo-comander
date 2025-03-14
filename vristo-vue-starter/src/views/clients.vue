@@ -1,7 +1,7 @@
 <template>
     <div>
     <div class="flex justify-end">
-        <router-link to="/newClient"> <button type="button" class="btn btn-primary">Agregar cliente</button>
+        <router-link to="/clientSettings"> <button type="button" class="btn btn-primary">Agregar cliente</button>
         </router-link>
     </div>
 
@@ -33,7 +33,7 @@
                             class="group cursor-pointer flex items-center justify-center p-2 rounded-full w-10 h-10 bg-gray-100 dark:bg-gray-700">
                             <div
                                 class="transition-transform transform group-hover:scale-110 text-gray-500 group-hover:text-blue-500 dark:text-white ">
-                                <router-link :to="'/projects'">
+                                <router-link :to="'/profile'">
                                 <icon-eye />
                                 </router-link>
                             </div>
@@ -50,10 +50,9 @@ import { ref, reactive, computed } from 'vue';
 import Vue3Datatable from '@bhplugin/vue3-datatable';
 import { useI18n } from 'vue-i18n';
 import { useAppStore } from '@/stores/index';
-import { useMeta } from '@/composables/use-meta';
 import { clients } from '@/projects'; // Ensure correct path
 import IconEye from '@/components/icon/icon-eye.vue';
-useMeta({ title: 'Advanced Table' });
+
 const store = useAppStore();
 const i18n = reactive(useI18n());
 const cols = ref([
@@ -61,7 +60,7 @@ const cols = ref([
     { field: 'name', title: 'Cliente' },
     { field: 'email', title: 'Email' },
     { field: 'phone', title: 'Phone' },
-    { field: 'series', title: 'Proyectos', sort: false },
+    { field: 'series', title: 'Perfil', sort: false },
 
 ]);
 

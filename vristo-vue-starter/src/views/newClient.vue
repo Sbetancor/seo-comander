@@ -2,7 +2,7 @@
     <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
         <ul class="flex space-x-2 rtl:space-x-reverse mb-4">
             <li>
-                <a href="javascript:;" class="text-primary hover:underline">Clientes</a>
+                <router-link to="/clients" class="text-primary hover:underline">Clientes</router-link>
             </li>
             <li class="before:content-['/'] ltr:before:mr-2 rtl:before:ml-2">
                 <span>Registro</span>

@@ -83,7 +83,41 @@
                                         </div>
                                     </router-link>
                                 </li>
-                                
+                                <li class="menu nav-item">
+                                    <button
+                                        type="button"
+                                        class="nav-link group w-full"
+                                        :class="{ active: activeDropdown === 'invoice' }"
+                                        @click="activeDropdown === 'invoice' ? (activeDropdown = null) : (activeDropdown = 'invoice')"
+                                    >
+                                        <div class="flex items-center">
+                                            <icon-menu-invoice class="group-hover:!text-primary shrink-0" />
+
+                                            <span class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{{
+                                                $t('invoices')
+                                            }}</span>
+                                        </div>
+                                        <div :class="{ 'rtl:rotate-90 -rotate-90': activeDropdown !== 'invoice' }">
+                                            <icon-caret-down />
+                                        </div>
+                                    </button>
+                                    <vue-collapsible :isOpen="activeDropdown === 'invoice'">
+                                        <ul class="sub-menu text-gray-500">
+                                            <li>
+                                                <router-link to="/invoice/list" @click="toggleMobileMenu">{{ $t('list') }}</router-link>
+                                            </li>
+                                            <li>
+                                                <router-link to="/invoice/preview" @click="toggleMobileMenu">{{ $t('preview') }}</router-link>
+                                            </li>
+                                            <li>
+                                                <router-link to="/invoice/add" @click="toggleMobileMenu">{{ $t('add') }}</router-link>
+                                            </li>
+                                            <li>
+                                                <router-link to="/invoice/edit" @click="toggleMobileMenu">{{ $t('edit') }}</router-link>
+                                            </li>
+                                        </ul>
+                                    </vue-collapsible>
+                                </li>
                                 <li class="nav-item">
                                     <router-link to="/tickets" class="group" @click="toggleMobileMenu">
                                         <div class="flex items-center">

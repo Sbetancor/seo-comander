@@ -17,7 +17,6 @@
     <div class="w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
       <!-- Cabecera de Meses -->
       <div class="flex p-1 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-300 font-bold ">
-        <div class="w-48 p-2 flex justify-center">Clientes</div>
         <div v-for="month in months" :key="month" class="flex-1 text-center p-2 border-l dark:border-gray-600">
           {{ month }}
         </div>
@@ -25,11 +24,7 @@
 
       <!-- Lista de Clientes y Proyectos -->
       <div v-for="client in filteredClients" :key="client.id" class="client-row flex border-b dark:border-gray-600">
-        <!-- Nombre del Cliente -->
-        <div class="w-48 flex flex-col justify-center mt-1 mb-1 text-white font-semibold text-center rounded"
-          :style="{ backgroundColor: client.projects[0]?.color }">
-          {{ client.name }}
-        </div>
+      
 
         <!-- Lista de Proyectos -->
         <div class="flex-1 flex flex-col">

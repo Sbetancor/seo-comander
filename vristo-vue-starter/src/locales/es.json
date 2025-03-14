@@ -1,4 +1,5 @@
 {     
+    
     "projects": "Proyectos",
     "tasks": "Tareas",
     "stadistics": "Estadísticas",
@@ -34,6 +35,7 @@
     "scrumboard": "tablero de scrum",
     "contacts": "Contactos",
     "invoice": "factura",
+    "invoices": "Facturación",
     "list": "lista",
     "preview": "Avance",
     "add": "Agregar",
